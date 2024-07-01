@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Pre Entrega 3</title>
 </head>
 <body>
     
+    <main class="container">
 
-    <!-- <script src="./preEntregas/preEntrega1.js"></script> -->
-    <script src="./preEntrega2.js"></script>    
+        <div class="iniciarSesion">
+            <div class="iniciarContainer">
+                <h2 class="title">Iniciar sesión</h2>
+                <form action="#" class="iniciarForm" onsubmit="return validar()">
+                    <input type="text" placeholder="Nombre de usuario" id="nombreUsuario">
+                    <input type="password" placeholder="Contraseña" id="contraseña">
+                    <input type="submit" class="enviarBtn">
+                </form>
+                <div id="msj"></div>
+            </div>
+
+            <div class="inscribirseColumna">
+                <h3>Asociate con nosotros</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, quam?</p>
+                <button class="inscribeteBtn" id="insBtn">Inscribete</button>
+            </div>
+        </div>
+
+        <div class="inscribete">
+            <div class="inscribeteContainer">
+                <h2 class="title">Inscribirse</h2>
+                <form action="" class="inscribeteForm">
+                    <input type="text" placeholder="Nombre de usuario">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="submit" class="enviarBtn">
+                </form>
+            </div>
+
+            <div class="iniciarColumna">
+                <h3>Bienvenido/a</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, unde?</p>
+                <button class="iniciarBtn" id="iniBtn">Iniciar Sesión</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./preEntrega3.js"></script>
 </body>
 </html>

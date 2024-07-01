@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: steelblue;
+}
+
+.container:before{
+    content: "";
+    position: absolute;
+}
+
+.iniciarSesion{
+    display: flex;    
+    justify-content: center;
+    width: 100vw;
+    color: white;    
+}
+
+.iniciarContainer{
+    width: 40%;
+}
+
+.title{
+    text-align: center;
+}
+
+.iniciarForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.iniciarForm input{
+    margin: 5px 0;
+    height: 40px;      
+    border-radius: 5px;  
+    border: 1px solid steelblue;
+}
+
+.iniciarForm input::placeholder{
+    padding-left: 15px;
+    font-weight: 500;
+    color: steelblue;
+}
+
+.enviarBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 50%;
+    align-self: center;
+    background-color: rgb(54, 69, 82);
+    color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    transition: ease .4s all;
+}
+
+.enviarBtn:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 116, 139);
+}
+
+.inscribirseColumna{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+    width: 40%;  
+    padding-left: 50px;
+}
+
+.inscribirseColumna h3,p{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.inscribeteBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;    
+    padding: 10px 20px;
+    margin-top: 10px;
+    align-self: center;
+    background-color: rgb(54, 69, 82);
+    color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    transition: ease .4s all;    
+}
+
+.inscribeteBtn:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 116, 139);
+}
+
+.inscribete{
+    opacity: 0;
+    display: flex;    
+    justify-content: center;
+    width: 100vw;
+    color: white;    
+}
+
+.inscribeteContainer{
+    width: 40%;
+}
+
+.inscribeteForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.inscribeteForm input{
+    margin: 5px 0;
+    height: 40px;      
+    border-radius: 5px;  
+    border: 1px solid steelblue;
+}
+
+.inscribeteForm input::placeholder{
+    padding-left: 15px;
+    font-weight: 500;
+    color: steelblue;
+}
+
+.iniciarColumna{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+    width: 40%;  
+    padding-left: 50px;
+}
+
+.iniciarColumna h3,p{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.iniciarBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 30%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    align-self: center;
+    background-color: rgb(54, 69, 82);
+    color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    transition: ease .4s all;
+}
+
+.iniciarBtn:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 116, 139);
+}
+
+/* ANIMACIONES */
+
+.container.sign-up-mode .iniciarSesion{    
+    transition: opacity .5s ease-in; 
+    opacity: 0;
+}
+
+.container.sign-up-mode .inscribete{
+    transition: opacity .5s ease-in; 
+    opacity: 1;
+    display: flex;    
+    justify-content: center;
+    width: 100vw;
+    color: white; 
+}
+
+.container.sign-in-mode .inscribete{    
+    transition: opacity .5s ease-in; 
+    opacity: 1;
+}
+
+.container.sign-in-mode .iniciarSesion{
+    transition: opacity .5s ease-in; 
+    opacity: 0;
+    display: flex;    
+    justify-content: center;
+    width: 100vw;
+    color: white;
+}
+
+
+/* PRODUCTOS */
+
+.tittle-productos{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 100px;  
+    font-size: 0.9rem;
+    font-weight: 400;    
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    margin: 0 100px;
+    justify-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img{
+    width: 100%;
+    height: 80%;
+    padding: 10px 50px;
+}
+
+.txt-producto{
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: "Montserrat", sans-serif;
+}
+
+.txt-producto h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: auto;
+    padding: 0 20px;
+    line-height: 20px;
+}
+
+.buy{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;    
+    padding: 10px 20px;        
+    background-color: rgb(54, 69, 82);
+    color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    transition: ease .4s all;
+}
+
+.buy:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 116, 139);
+}
+
+.regreat{
+    display: table;
+    margin: 50px auto;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;   
+    font-weight: 500;    
+    padding: 15px 30px;        
+    background-color: rgb(54, 69, 82);    
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    transition: ease .4s all;
+}
+
+.regreat a{
+    color: white;
+    text-decoration: none;
+}
+
+.regreat:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 116, 139);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Socios</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ingreso de Socios</h1>
+    <form action="#" class="iniciarForm" onsubmit="return validar()">
+        <input type="text" placeholder="Nombre de usuario" id="nombreUsuario" required>
+        <input type="password" placeholder="Contraseña" id="contraseña" required>
+        <input type="submit" class="enviarBtn">
+    </form>
+    <div id="msj"></div>
+
+    <script>
+        let listaSocios = [
+            {nombre: "Matias", apellido: "Ponce", contraseña:"argentina"},
+            {nombre: "Nicolas", apellido: "Ponce", contraseña:"peru"},
+            {nombre: "Santiago", apellido: "Zapata", contraseña:"colombia"},
+            {nombre: "Seomara", apellido: "Funes", contraseña:"venezuela"},
+            {nombre: "Madeleine", apellido: "Velazques", contraseña:"brasil"}
+        ];
+
+        function validar() {
+            let nombreUsuario = document.getElementById("nombreUsuario").value;
+            let password = document.getElementById("contraseña").value;
+            let msj = document.getElementById("msj");
+
+            let socioEncontrado = listaSocios.find(socio => 
+                socio.nombre === nombreUsuario.split(' ')[0] && 
+                socio.apellido === nombreUsuario.split(' ')[1] && 
+                socio.contraseña === password
+            );
+
+            if (socioEncontrado) {
+                // Usuario válido, redirigir a la página de productos
+                window.location.href = "productos.html";
+            } else {
+                // Mostrar mensaje de error
+                msj.innerHTML = `<h2>ERROR DE USUARIO</h2>
+                                 <p>El usuario ${nombreUsuario} no existe o la contraseña es incorrecta</p>
+                                 <a href="index.html">Volver</a>`;
+            }
+
+            // Prevenir el comportamiento por defecto del formulario
+            return false;
+        }
+    </script>
+</body>
+</html>
